@@ -19,7 +19,7 @@ def create_tree():
     return tree
 
 
-def binarySearch(root, node):
+def treeSearch(root, node):
     final_path = []
     current = node
     while current != "USA":
@@ -33,7 +33,7 @@ def binarySearch(root, node):
 @app.route('/<string:arg>')
 def hello_world(arg: str):
     tree = create_tree()
-    route = binarySearch(tree, arg.upper())
+    route = treeSearch(tree, arg.upper())
     return jsonify(
         destination=arg.upper(),
         list=route
