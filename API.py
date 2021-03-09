@@ -27,7 +27,7 @@ def treeSearch(root, node):
             if current in child:
                 final_path.insert(0, current)
                 current = parent
-    final_path.insert(0, "USA")
+    final_path.insert(0, current)
     return final_path
 
 @app.route('/<string:arg>')
