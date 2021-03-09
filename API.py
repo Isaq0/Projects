@@ -27,6 +27,8 @@ def treeSearch(root, node):
             if current in child:
                 final_path.insert(0, current)
                 current = parent
+            else:
+                return "Invalid input"
     final_path.insert(0, current)
     return final_path
 
